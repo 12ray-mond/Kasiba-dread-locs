@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasiba Dread Locs - Precision Loc Machines & Tools</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',
+                            goldhover: '#C5A028',
+                            brown: '#2C1A11',
+                            darkbrown: '#1A0F0A',
+                            accent: '#8C6239',
+                            cream: '#FDFBF7',
+                            softgray: '#F3EFEA',
+                            charcoal: '#1E1E1E'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #F3EFEA;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #8C6239;
+            border-radius: 4px;
+        }
+        .glass-nav {
+            background: rgba(26, 15, 10, 0.92);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-charcoal font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-brand-accent/20 text-white shadow-xl transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-brand-gold to-brand-accent flex items-center justify-center text-brand-darkbrown font-black text-xl shadow-lg group-hover:scale-105 transition-transform">
+                    K
+                </div>
+                <div>
+                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-brand-gold block leading-none">KASIBA</span>
+                    <span class="text-[10px] tracking-[0.25em] text-amber-200/80 uppercase font-semibold block mt-0.5">Dread Loc Tools</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-gray-200">
+                <a href="#home" class="hover:text-brand-gold transition-colors py-1 border-b-2 border-transparent hover:border-brand-gold">Home</a>
+                <a href="#products" class="hover:text-brand-gold transition-colors py-1 border-b-2 border-transparent hover:border-brand-gold">Catalog</a>
+                <a href="#comparison" class="hover:text-brand-gold transition-colors py-1 border-b-2 border-transparent hover:border-brand-gold">Tool Guide</a>
+                <a href="#about" class="hover:text-brand-gold transition-colors py-1 border-b-2 border-transparent hover:border-brand-gold">About Us</a>
+                <a href="#contact" class="hover:text-brand-gold transition-colors py-1 border-b-2 border-transparent hover:border-brand-gold">Contact</a>
+            </nav>
+
+            <!-- Actions & Cart Button -->
+            <div class="flex items-center space-x-4">
+                <button id="cartBtn" class="relative p-2.5 rounded-full bg-brand-brown hover:bg-brand-accent text-white transition-all shadow-inner focus:outline-none focus:ring-2 focus:ring-brand-gold" aria-label="Shopping Cart">
+                    <i class="fa-solid font-bold fa-shopping-bag text-lg"></i>
+                    <span id="cartCount" class="absolute -top-1 -right-1 bg-brand-gold text-brand-darkbrown font-extrabold text-xs w-5 h-5 rounded-full flex items-center justify-center shadow-md scale-100 transition-transform">0</span>
+                </button>
+
+                <!-- Mobile menu toggle button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-300 hover:text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobileMenu" class="hidden md:hidden bg-brand-darkbrown border-b border-brand-accent/30 px-6 py-4 space-y-3">
+            <a href="#home" class="mobile-link block text-gray-200 hover:text-brand-gold py-1">Home</a>
+            <a href="#products" class="mobile-link block text-gray-200 hover:text-brand-gold py-1">Catalog</a>
+            <a href="#comparison" class="mobile-link block text-gray-200 hover:text-brand-gold py-1">Tool Guide</a>
+            <a href="#about" class="mobile-link block text-gray-200 hover:text-brand-gold py-1">About Us</a>
+            <a href="#contact" class="mobile-link block text-gray-200 hover:text-brand-gold py-1">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- HERO SECTION -->
+        <section id="home" class="relative bg-brand-darkbrown text-white py-20 lg:py-28 overflow-hidden">
+            <!-- Background Decorative Elements -->
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand-gold/10 blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-brand-accent/20 blur-3xl"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-gold/15 text-brand-gold border border-brand-gold/30 text-xs font-semibold uppercase tracking-wider">
+                            <i class="fa-solid fa-crown text-xs"></i>
+                            <span>Professional Loc Craftsman Gear</span>
+                        </div>
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                            Master Your Loc Craft With <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-amber-200 to-amber-500">Precision Engineering</span>
+                        </h1>
+                        <p class="text-gray-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-light">
+                            Designed for locticians, salons, and loc enthusiasts. From handcrafted manual interlockers to motorized high-speed loc creation machines.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                            <a href="#products" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-gold to-amber-600 text-brand-darkbrown font-bold hover:shadow-lg hover:shadow-brand-gold/20 transition-all hover:-translate-y-0.5 text-center">
+                                Shop Machines & Tools <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                            <a href="#comparison" class="w-full sm:w-auto px-8 py-4 rounded-xl border border-gray-600 hover:border-brand-gold text-gray-200 hover:text-brand-gold font-semibold transition-all text-center">
+                                Machine Guide Matrix
+                            </a>
+                        </div>
+                        <!-- Features Pill Container -->
+                        <div class="pt-8 border-t border-gray-800 grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <p class="text-xl font-bold text-brand-gold">100%</p>
+                                <p class="text-xs text-gray-400">Ergonomic Precision</p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold text-brand-gold">4x Faster</p>
+                                <p class="text-xs text-gray-400">Automated Locing</p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold text-brand-gold">Global</p>
+                                <p class="text-xs text-gray-400">Worldwide Shipping</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual Card -->
+                    <div class="relative flex justify-center">
+                        <div class="relative w-full max-w-xl bg-gradient-to-b from-brand-brown to-brand-darkbrown p-6 rounded-3xl border border-brand-accent/40 shadow-2xl">
+                            <div class="aspect-square rounded-2xl bg-gradient-to-br from-amber-950/40 to-neutral-900/90 flex items-center justify-center p-6 relative overflow-hidden group">
+                                <span class="absolute top-4 right-4 bg-brand-gold text-brand-darkbrown text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Flagship</span>
+                                <img
+                                    src="images/MAX wix.jpeg"
+                                    alt="Max Wix Automated Machine"
+                                    class="w-full max-w-md h-96 object-contain drop-shadow-[0_10px_25px_rgba(212,175,55,0.3)]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT CATALOG SECTION -->
+        <section id="products" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-accent font-bold text-sm tracking-widest uppercase block mb-2">Kasiba Signature Collection</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-darkbrown">Loc Tightening & Crafting Machinery</h2>
+                <p class="text-gray-600 mt-3 font-light">
+                    Every tool is engineered to deliver pristine, compact locs with minimal hand fatigue and zero hair breakage.
+                </p>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- JavaScript will dynamically render product cards here -->
+            </div>
+        </section>
+
+        <!-- INTERACTIVE TOOL COMPARISON SECTION -->
+        <section id="comparison" class="py-20 bg-brand-softgray border-y border-brand-accent/15">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-brand-accent font-bold text-xs uppercase tracking-widest block mb-1">Buyer's Decision Matrix</span>
+                    <h2 class="font-serif text-3xl font-bold text-brand-darkbrown">Tool & Machine Comparison Guide</h2>
+                    <p class="text-gray-600 text-sm mt-2">Find the exact tool suitable for your specific hair density and loc maintenance workflow.</p>
+                </div>
+
+                <!-- Comparison Table -->
+                <div class="overflow-x-auto rounded-2xl shadow-lg border border-brand-accent/20 bg-white">
+                    <table class="w-full text-left border-collapse min-w-[640px]">
+                        <thead>
+                            <tr class="bg-brand-darkbrown text-white text-sm font-semibold">
+                                <th class="p-4 pl-6">Specifications</th>
+                                <th class="p-4 text-center text-brand-gold">Normal Tool</th>
+                                <th class="p-4 text-center text-brand-gold">Sister Loc Tool</th>
+                                <th class="p-4 text-center text-brand-gold">Mini Wix Machine</th>
+                                <th class="p-4 text-center text-brand-gold">Max Wix Machine</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 text-sm">
+                            <tr class="hover:bg-brand-cream/50 transition-colors">
+                                <td class="p-4 pl-6 font-semibold text-brand-darkbrown">Operation Type</td>
+                                <td class="p-4 text-center">Manual Precision</td>
+                                <td class="p-4 text-center">Micro-Manual</td>
+                                <td class="p-4 text-center">Automated Motorized with fingure like Locs</td>
+                                <td class="p-4 text-center">Heavy Duty Auto with double fingure like locs</td>
+                            </tr>
+                            <tr class="hover:bg-brand-cream/50 transition-colors">
+                                <td class="p-4 pl-6 font-semibold text-brand-darkbrown">Best For Loc Size</td>
+                                <td class="p-4 text-center">Standard / Medium Locs</td>
+                                <td class="p-4 text-center">Micro & Sisterlocs</td>
+                                <td class="p-4 text-center">fingure like Locs</td>
+                                <td class="p-4 text-center">All Sizes (Insta-Locs)</td>
+                            </tr>
+                            <tr class="hover:bg-brand-cream/50 transition-colors">
+                                <td class="p-4 pl-6 font-semibold text-brand-darkbrown">Speed Rating</td>
+                                <td class="p-4 text-center">Standard</td>
+                                <td class="p-4 text-center">High Control</td>
+                                <td class="p-4 text-center">3x Faster</td>
+                                <td class="p-4 text-center">6x Ultra Speed</td>
+                            </tr>
+                            <tr class="hover:bg-brand-cream/50 transition-colors">
+                                <td class="p-4 pl-6 font-semibold text-brand-darkbrown">Power Source</td>
+                                <td class="p-4 text-center">Hand Powered</td>
+                                <td class="p-4 text-center">Hand Powered</td>
+                                <td class="p-4 text-center">Rechargeable Li-ion</td>
+                                <td class="p-4 text-center">Dual Bat / AC Adapter</td>
+                            </tr>
+                            <tr class="hover:bg-brand-cream/50 transition-colors">
+                                <td class="p-4 pl-6 font-semibold text-brand-darkbrown">Skill Level Needed</td>
+                                <td class="p-4 text-center">Beginner Friendly</td>
+                                <td class="p-4 text-center">Intermediate</td>
+                                <td class="p-4 text-center">Beginner to Pro</td>
+                                <td class="p-4 text-center">Professional Salon</td>
+                            </tr>
+                            <tr class="bg-brand-cream/70">
+                                <td class="p-4 pl-6 font-bold text-brand-darkbrown">Price</td>
+                                <td class="p-4 text-center font-bold text-brand-accent">$100.00</td>
+                                <td class="p-4 text-center font-bold text-brand-accent">$150.00</td>
+                                <td class="p-4 text-center font-bold text-brand-accent">$160.00</td>
+                                <td class="p-4 text-center font-bold text-brand-accent">$280.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT BRAND SECTION -->
+        <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-brand-accent font-bold text-xs uppercase tracking-widest">Craftsmanship Meets Tech</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-darkbrown">Why Salons & Locticians Trust Kasiba</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        At <strong class="text-brand-darkbrown">Kasiba Dread Locs</strong>, we understand that hair maintenance is an art form. Traditional interlocking and crotcheting techniques can cause strain on wrist joints and uneven dread density over long sessions.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our tools are tested extensively by master locticians. Whether you're tightening Sisterlocs with our micro-latch tools or creating full instant loc sets using the powerful <strong>Max Wix machine</strong>, Kasiba guarantees snag-free operation and effortless lock structure.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-xl bg-brand-softgray border border-brand-accent/20">
+                            <i class="fa-solid fa-shield-halved text-brand-gold text-2xl mb-2"></i>
+                            <h4 class="font-bold text-brand-darkbrown text-sm">Stainless Needles</h4>
+                            <p class="text-xs text-gray-500 mt-1">Medical-grade anti-rust stainless alloy components.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-brand-softgray border border-brand-accent/20">
+                            <i class="fa-solid fa-sliders text-brand-gold text-2xl mb-2"></i>
+                            <h4 class="font-bold text-brand-darkbrown text-sm">Variable Speed</h4>
+                            <p class="text-xs text-gray-500 mt-1">Automated machines feature adjustable motor torque.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Collage -->
+                <div class="relative bg-brand-darkbrown rounded-3xl p-8 text-white shadow-2xl overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-brand-gold/10 rounded-full blur-2xl"></div>
+                    <div class="space-y-6 relative z-10">
+                        <div class="flex items-center space-x-4 border-b border-gray-800 pb-6">
+                            <div class="w-12 h-12 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold text-xl font-bold">
+                                01
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Ergonomic Anti-Slip Grip</h4>
+                                <p class="text-xs text-gray-400">Reduces strain during long loc creation sessions.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 border-b border-gray-800 pb-6">
+                            <div class="w-12 h-12 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold text-xl font-bold">
+                                02
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Micro-Hook Tech</h4>
+                                <p class="text-xs text-gray-400">Smooth hair catch without tearing natural fiber strands.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold text-xl font-bold">
+                                03
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Dual Power Mode</h4>
+                                <p class="text-xs text-gray-400">Plug-and-play AC adapter or long-life cordless battery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="contact" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-accent font-bold text-xs uppercase tracking-widest">We're Here to Help</span>
+                <h2 class="font-serif text-3xl font-bold text-brand-darkbrown mt-2">Contact Us</h2>
+                <p class="text-gray-600 text-sm mt-3">Have a question? Get in touch with the Kasiba team.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <a href="mailto:lugya.raymond25@gmail.com"
+                   class="p-6 rounded-2xl bg-brand-softgray border border-brand-accent/20 text-center hover:shadow-lg transition-shadow">
+                    <i class="fa-solid fa-envelope text-brand-accent text-2xl mb-3"></i>
+                    <h3 class="font-bold text-brand-darkbrown">Email</h3>
+                    <p class="text-sm text-gray-600 mt-2">lugya.raymond25@gmail.com</p>
+                </a>
+
+                <a href="tel:+256700229008"
+                   class="p-6 rounded-2xl bg-brand-softgray border border-brand-accent/20 text-center hover:shadow-lg transition-shadow">
+                    <i class="fa-solid fa-phone text-brand-accent text-2xl mb-3"></i>
+                    <h3 class="font-bold text-brand-darkbrown">Call Us</h3>
+                    <p class="text-sm text-gray-600 mt-2">+256 700 229 008</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq" class="py-20 bg-brand-softgray">
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-darkbrown text-gray-300 pt-16 pb-8 border-t border-brand-accent/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <a href="#" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center text-brand-darkbrown font-black text-lg">
+                            K
+                        </div>
+                        <span class="font-serif text-xl font-bold text-brand-gold">KASIBA</span>
+                    </a>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Empowering stylists and hair enthusiasts worldwide with premium dreadlock machines, latch tools, and interlockers.
+                    </p>
+                    <div class="flex space-x-4 text-brand-gold pt-2">
+                        <a href="#" class="hover:text-white transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-white transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="hover:text-white transition-colors" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 tracking-wider uppercase">Products</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#products" class="hover:text-brand-gold transition-colors">Normal Tool</a></li>
+                        <li><a href="#products" class="hover:text-brand-gold transition-colors">Sister Loc Tool</a></li>
+                        <li><a href="#products" class="hover:text-brand-gold transition-colors">Mini Wix Machine</a></li>
+                        <li><a href="#products" class="hover:text-brand-gold transition-colors">Max Wix Machine</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 tracking-wider uppercase">Support</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#contact" class="hover:text-brand-gold transition-colors">Maintenance Guide</a></li>
+                        <li><a href="#contact" class="hover:text-brand-gold transition-colors">Shipping Policy</a></li>
+                        <li><a href="#contact" class="hover:text-brand-gold transition-colors">Returns & Warranty</a></li>
+                        <li><a href="#contact" class="hover:text-brand-gold transition-colors">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 tracking-wider uppercase">Join Kasiba Club</h4>
+                    <p class="text-xs text-gray-400 mb-3">Get exclusive discounts and loctician maintenance tips.</p>
+                    <form onsubmit="event.preventDefault(); showToast('Subscribed to newsletter!');" class="space-y-2">
+                        <input type="email" placeholder="Your email address" required class="w-full px-3 py-2 rounded-lg bg-gray-900 border border-gray-700 text-xs text-white focus:outline-none focus:border-brand-gold">
+                        <button type="submit" class="w-full py-2 bg-brand-gold text-brand-darkbrown font-bold text-xs rounded-lg hover:bg-brand-goldhover transition-colors">
+                            Subscribe Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center text-xs text-gray-500">
+                &copy; <span id="year"></span> Kasiba Dread Locs. All rights reserved. Designed for precision loc care.
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART DRAWER MODAL -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" id="cartOverlay"></div>
+
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white text-brand-charcoal shadow-2xl flex flex-col">
+                <!-- Drawer Header -->
+                <div class="p-6 bg-brand-darkbrown text-white flex items-center justify-between border-b border-brand-accent/20">
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-shopping-bag text-brand-gold text-xl"></i>
+                        <h2 class="text-lg font-serif font-bold">Your Loc Gear Bag</h2>
+                    </div>
+                    <button id="closeCartBtn" class="p-2 text-gray-400 hover:text-white transition-colors">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Drawer Content / Cart Items List -->
+                <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar">
+                    <!-- Dynamic Cart Items Rendered Here -->
+                </div>
+
+                <!-- Drawer Footer -->
+                <div class="p-6 bg-brand-cream border-t border-gray-200 space-y-4">
+                    <div class="space-y-1 text-sm">
+                        <div class="flex justify-between text-gray-600">
+                            <span>Subtotal</span>
+                            <span id="cartSubtotal" class="font-bold text-brand-darkbrown">$0.00</span>
+                        </div>
+                        <div class="flex justify-between text-gray-600">
+                            <span>Shipping</span>
+                            <span class="text-emerald-600 font-semibold">Calculated at Checkout</span>
+                        </div>
+                        <div class="flex justify-between text-base font-bold text-brand-darkbrown pt-2 border-t">
+                            <span>Total</span>
+                            <span id="cartTotal" class="text-brand-accent text-xl">$0.00</span>
+                        </div>
+                    </div>
+
+                    <button id="checkoutBtn" class="w-full py-4 bg-gradient-to-r from-brand-gold to-amber-600 text-brand-darkbrown font-bold rounded-xl shadow-lg hover:shadow-brand-gold/30 hover:opacity-95 transition-all text-center flex items-center justify-center space-x-2">
+                        <span>Proceed to Checkout</span>
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT QUICK VIEW MODAL -->
+    <div id="quickViewModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-brand-accent/20 relative animate-fade-in">
+            <button id="closeQuickView" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-brand-softgray text-brand-darkbrown hover:bg-brand-gold transition-colors flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="quickViewContent" class="p-6 md:p-8">
+                <!-- Quick view details inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CHECKOUT SIMULATION MODAL -->
+    <div id="checkoutModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-xl w-full overflow-hidden shadow-2xl border border-brand-accent/20 relative max-h-[90vh] flex flex-col">
+            <div class="p-6 bg-brand-darkbrown text-white flex justify-between items-center">
+                <h3 class="font-serif text-xl font-bold text-brand-gold">Kasiba Checkout</h3>
+                <button id="closeCheckout" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+
+            <div class="p-6 overflow-y-auto custom-scrollbar space-y-6 flex-1">
+                <!-- Order Summary Header -->
+                <div id="checkoutSummaryBox" class="bg-brand-cream p-4 rounded-xl border border-brand-accent/20 text-xs space-y-2">
+                    <p class="font-bold text-brand-darkbrown text-sm">Order Summary</p>
+                    <div id="checkoutItemsList" class="divide-y divide-gray-200"></div>
+                    <div class="flex justify-between font-bold text-sm pt-2 text-brand-accent">
+                        <span>Total Payable:</span>
+                        <span id="checkoutTotalPayable">$0.00</span>
+                    </div>
+                </div>
+
+                <!-- Checkout Form -->
+                <form id="checkoutForm" class="space-y-4">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">First Name</label>
+                            <input type="text" required class="w-full px-3 py-2 border rounded-lg text-xs focus:ring-1 focus:ring-brand-gold outline-none" placeholder="Jane">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Last Name</label>
+                            <input type="text" required class="w-full px-3 py-2 border rounded-lg text-xs focus:ring-1 focus:ring-brand-gold outline-none" placeholder="Doe">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Email Address</label>
+                        <input type="email" required class="w-full px-3 py-2 border rounded-lg text-xs focus:ring-1 focus:ring-brand-gold outline-none" placeholder="jane@example.com">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Shipping Address</label>
+                        <input type="text" required class="w-full px-3 py-2 border rounded-lg text-xs focus:ring-1 focus:ring-brand-gold outline-none" placeholder="123 Salon Avenue, Suite 4B">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Payment Method</label>
+                            <select class="w-full px-3 py-2 border rounded-lg text-xs focus:ring-1 focus:ring-brand-gold outline-none">
+                                <option>Credit / Debit Card</option>
+                                <option>Mobile Money / Bank</option>
+                                
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Card / Account Number</label>
+                            <input type="text" placeholder="•••• •••• •••• 4242" required class="w-full px-3 py-2 border rounded-lg text-xs focus:ring-1 focus:ring-brand-gold outline-none">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 bg-brand-gold text-brand-darkbrown font-bold rounded-xl text-sm hover:bg-brand-goldhover transition-colors shadow-md mt-4">
+                        Confirm & Complete Order
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-brand-darkbrown text-white px-5 py-3 rounded-xl shadow-2xl border border-brand-gold flex items-center space-x-3 translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <i id="toastIcon" class="fa-solid fa-circle-check text-brand-gold"></i>
+        <span id="toastMsg" class="text-xs font-semibold">Item added to your cart</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- 1. PRODUCT CATALOG DATA ---
+        const products = [
+            {
+                id: 'prod-normal',
+                name: 'Normal Tool',
+                tagline: 'Standard Loc Tightening Tool',
+                price: 100.0,
+                rating: 4.8,
+                reviews: 142,
+                badge: 'Essential',
+                description: 'Ergonomically shaped double-ended latch hook designed for routine retightening and maintenance of standard dreadlocs.',
+                details: 'Constructed with smooth, surgical-grade stainless steel to ensure root maintenance without hair tearing. Suitable for medium to thick locs.',
+                image: 'images/normal tool.jpeg',
+                svg: `
+                    <svg class="w-32 h-32 transition-transform duration-300 group-hover:scale-110 drop-shadow-md" viewBox="0 0 100 100" fill="none">
+                        <path d="M50 10 L50 85" stroke="#D4AF37" stroke-width="4" stroke-linecap="round"/>
+                        <circle cx="50" cy="18" r="6" fill="#2C1A11" stroke="#D4AF37" stroke-width="2"/>
+                        <path d="M50 85 C45 88, 42 75, 48 70 C52 65, 55 80, 50 85 Z" fill="#8C6239"/>
+                        <path d="M48 35 H52 M47 45 H53" stroke="#8C6239" stroke-width="2"/>
+                    </svg>
+                `
+            },
+            {
+                id: 'prod-sister',
+                name: 'Sister Loc Tool',
+                tagline: 'Micro-Loc & Precision Maintenance Tool',
+                price: 150.00,
+                rating: 4.9,
+                reviews: 210,
+                badge: 'Best Seller',
+                description: 'Ultra-thin, refined precision tool specifically crafted for Sisterlocs, microlocs, and fine strand interlock maintenance.',
+                details: 'Features an ultra-slim eyelet latch that easily glides through delicate hair roots with absolute precision and no pain.',
+                image: 'images/kasiba tools.jpeg',
+                svg: `
+                    <svg class="w-32 h-32 transition-transform duration-300 group-hover:scale-110 drop-shadow-md" viewBox="0 0 100 100" fill="none">
+                        <path d="M50 8 L50 90" stroke="#8C6239" stroke-width="2.5" stroke-linecap="round"/>
+                        <ellipse cx="50" cy="16" rx="3" ry="7" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <path d="M48 50 L52 50 M48 60 L52 60 M48 70 L52 70" stroke="#D4AF37" stroke-width="1.5"/>
+                        <circle cx="50" cy="88" r="3" fill="#D4AF37"/>
+                    </svg>
+                `
+            },
+            {
+                id: 'prod-mini-wix',
+                name: 'Mini Wix Machine',
+                tagline: 'Compact Motorized Automated Tool',
+                price: 160.00,
+                rating: 4.7,
+                reviews: 98,
+                badge: 'Automated',
+                description: 'Portable motorized loc creation machine. Accelerates interlock speed by 3x with ergonomic single-button control.',
+                details: 'Equipped with a quiet high-RPM motor, rechargeable battery, and interchangeable micro needle heads for home or mobile locticians.',
+                image: '',
+                svg: `
+                    <svg class="w-32 h-32 transition-transform duration-300 group-hover:scale-110 drop-shadow-md" viewBox="0 0 100 100" fill="none">
+                        <rect x="38" y="20" width="24" height="50" rx="8" fill="#2C1A11" stroke="#D4AF37" stroke-width="2"/>
+                        <circle cx="50" cy="35" r="4" fill="#D4AF37"/>
+                        <rect x="47" y="70" width="6" height="20" fill="#E5E7EB"/>
+                        <path d="M44 48 H56 M44 54 H56" stroke="#8C6239" stroke-width="2"/>
+                    </svg>
+                `
+            },
+            {
+                id: 'prod-max-wix',
+                name: 'Max Wix Machine',
+                tagline: 'Heavy-Duty High-Speed Loc Machine',
+                price: 280.00,
+                rating: 5.0,
+                reviews: 320,
+                badge: 'Pro Salon',
+                description: 'Dual-needle heavy duty machine engineered for instant locs, repairs, and full head installations in record time.',
+                details: 'Built for heavy salon usage with dual fast-action needles, digital power level indicator, and high-torque heat dissipative motor.',
+                image: 'images/MAX wix.jpeg',
+                svg: `
+                    <svg class="w-32 h-32 transition-transform duration-300 group-hover:scale-110 drop-shadow-md" viewBox="0 0 100 100" fill="none">
+                        <rect x="30" y="20" width="40" height="55" rx="10" fill="#1A0F0A" stroke="#D4AF37" stroke-width="2.5"/>
+                        <rect x="38" y="30" width="24" height="15" rx="3" fill="#2C1A11" stroke="#8C6239"/>
+                        <circle cx="50" cy="37.5" r="3" fill="#D4AF37"/>
+                        <path d="M42 80 V92 M58 80 V92" stroke="#E5E7EB" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="42" cy="93" r="1" fill="#D4AF37"/>
+                        <circle cx="58" cy="93" r="1" fill="#D4AF37"/>
+                    </svg>
+                `
+            }
+        ];
+
+        // --- 2. STATE MANAGEMENT ---
+        let cart = [];
+
+        // --- 3. DOM ELEMENTS ---
+        const productGrid = document.getElementById('productGrid');
+        const cartBtn = document.getElementById('cartBtn');
+        const cartDrawer = document.getElementById('cartDrawer');
+        const cartOverlay = document.getElementById('cartOverlay');
+        const closeCartBtn = document.getElementById('closeCartBtn');
+        const cartItemsContainer = document.getElementById('cartItemsContainer');
+        const cartCount = document.getElementById('cartCount');
+        const cartSubtotal = document.getElementById('cartSubtotal');
+        const cartTotal = document.getElementById('cartTotal');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        
+        const quickViewModal = document.getElementById('quickViewModal');
+        const quickViewContent = document.getElementById('quickViewContent');
+        const closeQuickView = document.getElementById('closeQuickView');
+
+        const checkoutModal = document.getElementById('checkoutModal');
+        const closeCheckout = document.getElementById('closeCheckout');
+        const checkoutForm = document.getElementById('checkoutForm');
+        const checkoutItemsList = document.getElementById('checkoutItemsList');
+        const checkoutTotalPayable = document.getElementById('checkoutTotalPayable');
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        // --- 4. RENDER PRODUCT CATALOG CARDS ---
+        function renderProducts() {
+            productGrid.innerHTML = products.map(product => `
+                <div class="bg-white rounded-2xl p-6 border border-brand-accent/15 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative">
+                    <!-- Badge -->
+                    <span class="absolute top-4 left-4 bg-brand-brown text-brand-gold text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                        ${product.badge}
+                    </span>
+
+                    <!-- Tool SVG Visual -->
+                    <div class="w-full aspect-square rounded-xl bg-gradient-to-b from-brand-cream to-brand-softgray flex items-center justify-center p-4 mb-4 relative overflow-hidden">
+                        ${product.image
+    ? `<img src="${product.image}" alt="${product.name}" class="w-full h-full object-contain"
+           onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+       <div hidden>${product.svg}</div>`
+    : product.svg}
+                    </div>
+
+                    <!-- Title & Info -->
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-500 text-xs mb-1">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="font-bold text-brand-darkbrown">${product.rating}</span>
+                            <span class="text-gray-400 font-normal">(${product.reviews})</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-darkbrown group-hover:text-brand-accent transition-colors">
+                            ${product.name}
+                        </h3>
+                        <p class="text-xs text-brand-accent font-semibold mb-2">${product.tagline}</p>
+                        <p class="text-xs text-gray-500 line-clamp-2 font-light leading-relaxed mb-4">
+                            ${product.description}
+                        </p>
+                    </div>
+
+                    <!-- Price & Action -->
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-400 block">Price</span>
+                            <span class="text-lg font-bold text-brand-darkbrown">$${product.price.toFixed(2)}</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button onclick="openQuickView('${product.id}')" class="p-2.5 rounded-xl border border-gray-200 hover:border-brand-gold text-gray-600 hover:text-brand-gold transition-colors" title="Quick View">
+                                <i class="fa-solid fa-eye text-sm"></i>
+                            </button>
+                            <button onclick="addToCart('${product.id}')" class="px-4 py-2.5 rounded-xl bg-brand-darkbrown hover:bg-brand-gold text-white hover:text-brand-darkbrown font-bold text-xs transition-all shadow-md flex items-center space-x-1">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                                <span>Add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // --- 5. CART FUNCTIONS ---
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const existingItem = cart.find(item => item.id === productId);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            updateCartUI();
+            showToast(`Added ${product.name} to cart`);
+        }
+
+        function updateQuantity(productId, delta) {
+            const item = cart.find(i => i.id === productId);
+            if (!item) return;
+
+            item.quantity += delta;
+            if (item.quantity <= 0) {
+                cart = cart.filter(i => i.id !== productId);
+            }
+            updateCartUI();
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(i => i.id !== productId);
+            updateCartUI();
+            showToast('Item removed from cart');
+        }
+
+        function updateCartUI() {
+            // Count
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+
+            // Calculations
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+            cartTotal.textContent = `$${subtotal.toFixed(2)}`;
+
+            // Render Drawer List
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = `
+                    <div class="text-center py-12 text-gray-400 space-y-3">
+                        <i class="fa-solid fa-shopping-bag text-4xl opacity-30"></i>
+                        <p class="text-sm">Your loc gear bag is empty.</p>
+                        <a href="#products" onclick="toggleCart(false)" class="inline-block text-xs text-brand-gold font-bold underline">Start Shopping</a>
+                    </div>
+                `;
+            } else {
+                cartItemsContainer.innerHTML = cart.map(item => `
+                    <div class="flex items-center space-x-4 p-3 bg-brand-cream rounded-xl border border-brand-accent/10">
+                        <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2 border border-gray-200">
+                            ${item.svg}
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-brand-darkbrown">${item.name}</h4>
+                            <p class="text-xs text-brand-accent font-semibold">$${item.price.toFixed(2)}</p>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <button onclick="updateQuantity('${item.id}', -1)" class="w-6 h-6 rounded bg-white border border-gray-300 text-xs flex items-center justify-center hover:bg-gray-100 font-bold">-</button>
+                                <span class="text-xs font-bold px-1">${item.quantity}</span>
+                                <button onclick="updateQuantity('${item.id}', 1)" class="w-6 h-6 rounded bg-white border border-gray-300 text-xs flex items-center justify-center hover:bg-gray-100 font-bold">+</button>
+                            </div>
+                        </div>
+                        <button onclick="removeFromCart('${item.id}')" class="text-gray-400 hover:text-red-500 p-2">
+                            <i class="fa-solid fa-trash-can text-sm"></i>
+                        </button>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function toggleCart(show) {
+            if (show) {
+                cartDrawer.classList.remove('hidden');
+            } else {
+                cartDrawer.classList.add('hidden');
+            }
+        }
+
+        // --- 6. QUICK VIEW MODAL ---
+        function openQuickView(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            quickViewContent.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div class="bg-brand-cream rounded-2xl p-6 flex items-center justify-center border border-brand-accent/20">
+                        ${product.svg}
+                    </div>
+                    <div class="space-y-4">
+                        <span class="px-2.5 py-1 bg-brand-gold/20 text-brand-darkbrown text-[10px] font-bold rounded-full uppercase tracking-wider">${product.badge}</span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-darkbrown">${product.name}</h3>
+                        <p class="text-xl font-extrabold text-brand-accent">$${product.price.toFixed(2)} USD</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">${product.description}</p>
+                        <div class="bg-brand-softgray p-3 rounded-xl border border-brand-accent/10">
+                            <h4 class="text-xs font-bold text-brand-darkbrown mb-1">Key Specification:</h4>
+                            <p class="text-xs text-gray-500">${product.details}</p>
+                        </div>
+                        <button onclick="addToCart('${product.id}'); quickViewModal.classList.add('hidden');" class="w-full py-3 bg-brand-darkbrown hover:bg-brand-gold text-white hover:text-brand-darkbrown font-bold text-xs rounded-xl transition-colors shadow-lg">
+                            Add to Shopping Cart
+                        </button>
+                    </div>
+                </div>
+            `;
+            quickViewModal.classList.remove('hidden');
+        }
+
+        // --- 7. CHECKOUT MODAL ---
+        function openCheckout() {
+            if (cart.length === 0) {
+                showToast('Your cart is empty!');
+                return;
+            }
+            toggleCart(false);
+
+            // Populate checkout summary
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            checkoutTotalPayable.textContent = `$${subtotal.toFixed(2)}`;
+
+            checkoutItemsList.innerHTML = cart.map(item => `
+                <div class="py-1.5 flex justify-between items-center text-xs">
+                    <span class="text-gray-700">${item.name} × ${item.quantity}</span>
+                    <span class="font-bold text-brand-darkbrown">$${(item.price * item.quantity).toFixed(2)}</span>
+                </div>
+            `).join('');
+
+            checkoutModal.classList.remove('hidden');
+        }
+
+        // --- 8. TOAST NOTIFICATION ---
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.textContent = message;
+
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+
+        // --- 9. EVENT LISTENERS SETUP ---
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+
+            // Set current year
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Cart Toggle
+            cartBtn.addEventListener('click', () => toggleCart(true));
+            closeCartBtn.addEventListener('click', () => toggleCart(false));
+            cartOverlay.addEventListener('click', () => toggleCart(false));
+
+            // Checkout Trigger
+            checkoutBtn.addEventListener('click', openCheckout);
+            closeCheckout.addEventListener('click', () => checkoutModal.classList.add('hidden'));
+
+            // Quick View Close
+            closeQuickView.addEventListener('click', () => quickViewModal.classList.add('hidden'));
+
+            // Mobile Menu Toggle
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-toggle').forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('i');
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+
+            // Handle Checkout Form Submission
+            checkoutForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                checkoutModal.classList.add('hidden');
+                cart = [];
+                updateCartUI();
+                
+                // Show Success Message Box
+                showToast('🎉 Order Placed Successfully! Thank you for choosing Kasiba.');
+            });
+        });
+    </script>
+</body>
+</html>
